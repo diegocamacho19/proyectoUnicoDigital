@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <title>Inicio</title>
+    </h:head>
+    <h:body>
+        <h2>Crear Usuario</h2>
+        <h:form>
+                <div class="card">
+                    <div class="ui-fluid">
+                        <div class="p-field">
+                            <p:outputLabel for="nombre" value="Nombre" />
+                        </div>
+                        <div class="p-field">
+                            <p:inputText id="nombre" required="true" value="#{usuarioBean.usuario.nombre}"/>
+                        </div>
+                        <div class="p-field">
+                            <p:outputLabel for="apellido" value="Apellido" />
+                        </div>
+                        <div class="p-field">
+                            <p:inputText id="apellido" required="true" value="#{usuarioBean.usuario.apellido}"/>
+                        </div>
+                        <div class="p-field">
+                            <p:outputLabel for="cedula" value="Cedula" />
+                        </div>
+                        <div class="p-field">
+                            <p:inputText id="cedula" required="true" value="#{usuarioBean.usuario.cedula}"/>
+                        </div>
+                        <div class="p-field">
+                            <p:outputLabel for="telefono" value="Telefono" />
+                        </div>
+                        <div class="p-field">
+                            <p:inputText id="telefono" required="true" value="#{usuarioBean.usuario.telefono}" />
+                        </div>
+                        <div class="p-field">
+                            <p:outputLabel for="direccion" value="Dirección" />
+                        </div>
+                        <div class="p-field">
+                            <p:inputText id="direccion" required="true" value="#{usuarioBean.usuario.direccion}"/>
+                        </div>
+                        <div class="p-field">
+                            <p:commandButton value="Guardar" ajax = "true" actionListener="#{usuarioBean.crear()}" update="mensaje" />
+                        </div>
+                        <div class="p-field">
+                            <p:outputLabel id="mensaje" value="#{usuarioBean.mensaje}" />
+                        </div>
+                    </div>
+                </div>
+        </h:form>
+    </h:body>
+</html>
